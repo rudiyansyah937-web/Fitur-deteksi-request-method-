@@ -16,10 +16,8 @@
     <h2>Selamat datang di SI Akademik</h2>
 
     <?php
-    // Ambil jenis metode request yang dikirim browser
     $method = $_SERVER['REQUEST_METHOD'];
 
-    // Deteksi metode request dan tampilkan pesan berbeda
     if ($method === 'POST') {
         $username = isset($_POST['username']) ? $_POST['username'] : 'User';
         echo "<div class='box post-style'>";
@@ -39,14 +37,12 @@
     }
     ?>
 
-    <!-- Form Pencarian (GET) -->
     <form action="index.php" method="GET">
         <h3>Form Cari (GET)</h3>
         <input type="text" name="keyword" placeholder="Cari sesuatu..." required>
         <button type="submit">Cari</button>
     </form>
 
-    <!-- Form Login (POST) -->
     <form action="index.php" method="POST">
         <h3>Form Login (POST)</h3>
         <input type="text" name="username" placeholder="Username" required><br><br>
